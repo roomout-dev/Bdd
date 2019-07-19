@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  room-out-bdd:
+    build: .
+    image: room-out-bdd:v0
+    environment:
+      POSTGRES_PASSWORD: pw-room-out
+    ports:
+      - "8081:5432"
+    container_name: room-out-bdd
+    volumes:
+      - "./data:/var/lib/postgresql/data/:rw"
