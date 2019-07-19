@@ -1,2 +1,2 @@
-FROM postgres:latest
-COPY sql/ /docker-entrypoint-initdb.d/
+FROM postgres:alpine
+COPY ./sql/001_create_sc.sql /docker-entrypoint-initdb.d/
